@@ -5,7 +5,7 @@ import type {
 } from "../typesAndInterface/types";
 
 export const userRegiter = async (userData: UserRegister) => {
-  const res = await fetch(`${import.meta.env.VITE_BASE_URL}/user/register`, {
+  const res = await fetch(`${import.meta.env.VITE_BASE_URL}/register`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     credentials: "include",
@@ -15,7 +15,7 @@ export const userRegiter = async (userData: UserRegister) => {
 };
 
 export const userLogin = async (userData: UserLogin) => {
-  const res = await fetch(`${import.meta.env.VITE_BASE_URL}/user/login`, {
+  const res = await fetch(`${import.meta.env.VITE_BASE_URL}/login`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     credentials: "include",
@@ -25,7 +25,7 @@ export const userLogin = async (userData: UserLogin) => {
 };
 
 export const otpVerify = async (userData: UserOtp) => {
-  const res = await fetch(`${import.meta.env.VITE_BASE_URL}/user/verify-otp`, {
+  const res = await fetch(`${import.meta.env.VITE_BASE_URL}/verify-otp`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     credentials: "include",
@@ -35,7 +35,7 @@ export const otpVerify = async (userData: UserOtp) => {
 };
 
 export const authCheck = async () => {
-  const res = await fetch(`${import.meta.env.VITE_BASE_URL}/user/auth-check`, {
+  const res = await fetch(`${import.meta.env.VITE_BASE_URL}/auth-check`, {
     method: "GET",
     credentials: "include",
   });
@@ -43,7 +43,7 @@ export const authCheck = async () => {
 };
 
 export const getAllUsers = async () => {
-  const res = await fetch(`${import.meta.env.VITE_BASE_URL}/user/chat-users`, {
+  const res = await fetch(`${import.meta.env.VITE_BASE_URL}/chat-users`, {
     method: "GET",
     credentials: "include",
   });
@@ -77,7 +77,7 @@ export const getMessages = async (conversationId: string) => {
   return res.json();
 };
 export const logoutUser = async () => {
-  const res = await fetch(`${import.meta.env.VITE_BASE_URL}/user/logout`, {
+  const res = await fetch(`${import.meta.env.VITE_BASE_URL}/logout`, {
     method: "POST",
     credentials: "include",
   });
